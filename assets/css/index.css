@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import 'utilities.css';
+@import 'layout.css';
+@import 'form.css';
+@import 'button.css';
+
+:root {
+  /* Font Family */
+  --ff-sans-serif: 'Montserrat', sans-serif;
+
+  /* Font Sizes */
+  --fs-2xs: 0.625rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.25rem;
+
+  /* Colors */
+  --clr-orange: #f2994a;
+  --clr-gray-1: #333333;
+  --clr-gray-2: #4f4f4f;
+  --clr-gray-3: #828282;
+  --clr-gray-4: #bdbdbd;
+  --clr-gray-5: #e0e0e0;
+  --clr-gray-6: #f2f2f2;
+  --clr-gray-7: #4e5150;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  /* Spacing */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+
+  /* Border Radius */
+  --br-1: 0.25rem;
+  --br-2: 0.5rem;
+  --br-3: 0.75rem;
+  --br-4: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-sans-serif);
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+.material-icons,
+.material-icons-round {
+  color: var(--clr-gray-4);
+}
+
+.md-12 {
+  font-size: var(--fs-xs);
+}
+
+.md-16 {
+  font-size: var(--fs-md);
+}
+
+.main-content {
+  padding-inline: clamp(var(--size-4), 0.5rem + 2.5vw, var(--size-12));
+  padding-block-start: clamp(var(--size-8), 1.75rem + 2.5vw, 4rem);
+  padding-block-end: var(--size-6);
+}
+
+.title-1 {
+  font-size: clamp(var(--fs-lg), 0.75rem + 1.75vw, var(--fs-2xl));
+  font-weight: 600;
+  color: var(--clr-gray-7);
+}
+
+.title-2 {
+  font-size: clamp(var(--fs-sm), 0.5rem + 1.5vw, var(--fs-lg));
+  font-weight: 600;
+  color: var(--clr-gray-1);
+  margin-block-end: clamp(var(--size-3), 0.5rem + 1vw, var(--size-4));
+}
+
+.checkout {
+  grid-area: checkout;
+}
+
+.cart {
+  grid-area: cart;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  background-color: var(--clr-gray-6);
+  border: none;
+  border-radius: var(--br-3);
+  padding-inline: var(--size-6);
+  padding-block-start: var(--size-8);
+  padding-block-end: var(--size-6);
+}
+
+.product-list > li + li {
+  margin-block-start: var(--size-7);
+}
+
+.product {
+  display: flex;
+  gap: var(--size-5);
+}
+
+.product__image {
+  max-inline-size: clamp(7.75rem, 6.5rem + 2.5vw, 8.5rem);
+  border: 0;
+  border-radius: var(--br-3);
+  overflow: hidden;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product__title {
+  font-size: clamp(var(--fs-xs), 0.5rem + 1vw, var(--fs-md));
+  font-weight: 600;
+  color: var(--clr-gray-7);
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-start: 0.5rem;
+}
+
+.current-price {
+  font-size: clamp(var(--fs-sm), 0.5rem + 1vw, var(--fs-md));
+  font-weight: 600;
+  color: var(--clr-orange);
+}
+
+.old-price {
+  font-size: clamp(var(--fs-2xs), 0.5rem + 0.5vw, var(--fs-xs));
+  font-weight: 600;
+  color: var(--clr-gray-7);
+  text-decoration: line-through;
+}
+
+.cart-actions {
+  display: flex;
+  gap: var(--size-7);
+  border: 1px solid var(--clr-gray-4);
+  border-radius: var(--br-3);
+  font-weight: 600;
+  padding-inline: 0.625rem;
+  padding-block: 0.875rem;
+  width: max-content;
+}
+
+.cart-actions__remove,
+.cart-actions__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-5);
+  height: var(--size-5);
+  background-color: var(--clr-gray-5);
+  color: var(--clr-gray-3);
+  border: none;
+  border-radius: var(--br-1);
+  cursor: pointer;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  border-block-start: 1px solid var(--clr-gray-4);
+  padding-block: 0.75rem;
+}
+
+.summary-item:last-child {
+  padding-block-end: 0;
+}
+
+.summary-item__title {
+  font-size: clamp(var(--fs-sm), 0.5rem + 1.25vw, var(--fs-lg));
+  font-weight: 600;
+}
+
+.shipping-price,
+.total-price {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.can-save-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(var(--fs-2xs), 0.25rem + 1.5vw, var(--fs-xs));
+  font-weight: 600;
+}
+
+.can-save-label span {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--clr-gray-2);
+}
+
+form > fieldset + fieldset {
+  margin-block-start: clamp(var(--size-11), 2.25rem + 1.5vw, 3.5rem);
+}

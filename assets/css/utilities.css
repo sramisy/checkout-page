@@ -1,0 +1,19 @@
+.mt-5 {
+    margin-block-start: var(--size-5);
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .justify-end {
+    justify-content: flex-end;
+  }
+  
+  .gap-6 {
+    gap: var(--size-6);
+  }

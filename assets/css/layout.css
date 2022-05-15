@@ -1,0 +1,27 @@
+.container {
+  max-inline-size: 960px;
+  margin-inline: auto;
+}
+
+.l-checkout {
+  display: -ms-grid;
+  display: grid;
+  gap: var(--size-10);
+  grid-template-areas:
+    'cart'
+    'checkout';
+  margin-block-start: clamp(var(--size-5), 0.75rem + 2.5vw, 3.25rem);
+}
+
+.l-form-control {
+  width: 100%;
+  margin-block-end: clamp(var(--size-4), 0.75rem + 1vw, var(--size-5));
+}
+
+@media screen and (min-width: 1024px) {
+  .l-checkout {
+    grid-template-areas: 'checkout cart';
+    align-items: start;
+    gap: 112px;
+  }
+}

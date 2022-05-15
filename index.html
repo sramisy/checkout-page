@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <main class="main-content">
+        <div class="container">
+            <h1 class="title-1">Checkout</h1>
+
+            <div class="l-checkout">
+                <section class="checkout">
+                    <form class="checkout-form">
+                        <fieldset class="contact-info">
+                            <legend class="title-2">Contact information</legend>
+
+                            <div class="l-form-control">
+                                <label for="email" class="form-label">E-mail</label>
+                                <div class="input-group has-left-icon">
+                                    <input type="email" name="email" id="email" placeholder="Enter your email..."
+                                        required autocomplete="email" class="form-control">
+                                    <span class="material-icons-round icon">email</span>
+                                </div>
+                            </div>
+
+                            <div class="l-form-control">
+                                <label for="phone" class="form-label">Phone</label>
+                                <div class="input-group has-left-icon">
+                                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone..." required
+                                        autocomplete="tel" class="form-control">
+                                    <span class="material-icons-round icon">phone</span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="shipping-info">
+                            <legend class="title-2">Shipping address</legend>
+
+                            <div class="l-form-control">
+                                <label for="fullName" class="form-label">Full name</label>
+                                <div class="input-group has-left-icon">
+                                    <input type="text" name="fullName" id="fullName" placeholder="Your full name..."
+                                        value="Rodney Cotton" required autocomplete="name" class="form-control">
+                                    <span class="material-icons-round icon">account_circle</span>
+                                </div>
+                            </div>
+
+                            <div class="l-form-control">
+                                <label for="address" class="form-label">Address</label>
+                                <div class="input-group has-left-icon">
+                                    <input type="text" name="address" id="address" placeholder="Your address..."
+                                        required autocomplete="address-level1" class="form-control">
+                                    <span class="material-icons-round icon">home</span>
+                                </div>
+                            </div>
+
+                            <div class="l-form-control">
+                                <label for="city" class="form-label">City</label>
+                                <div class="input-group has-left-icon">
+                                    <input type="text" name="city" id="city" placeholder="Your city..." required
+                                        autocomplete="street-address" class="form-control">
+                                    <span class="material-icons-round icon">location_city</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between gap-6">
+                                <div class="l-form-control">
+                                    <label for="country" class="form-label">Country</label>
+                                    <div class="input-group has-left-icon has-right-icon">
+                                        <select name="country" id="country" class="form-select-control" required>
+                                            <option value="">Your country...</option>
+                                            <option value="1">Great Britain</option>
+                                            <option value="2">United States</option>
+                                            <option value="3">Canada</option>
+                                            <option value="4">Australia</option>
+                                            <option value="5">New Zealand</option>
+                                        </select>
+                                        <span class="material-icons-round icon">public</span>
+                                        <span class="material-icons-round bg-icon">expand_more</span>
+                                    </div>
+                                </div>
+
+                                <div class="l-form-control">
+                                    <label for="postalCode" class="form-label">Postal code</label>
+                                    <div class="input-group has-left-icon">
+                                        <input type="text" name="postalCode" id="postalCode"
+                                            placeholder="Your postal code..." required autocomplete="postal-code"
+                                            class="form-control">
+                                        <span class="material-icons-round icon">markunread_mailbox</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <label for="canSave" class="can-save-label">
+                            <input type="checkbox" name="canSave" id="canSave" class="custom-checkbox">
+                            <span>Save this information for next time</span>
+                        </label>
+
+                        <div class="flex justify-end mt-5">
+                            <button type="submit" class="btn btn--primary">Continue</button>
+                        </div>
+                    </form>
+                </section>
+
+                <aside class="cart">
+                    <div class="cart-content">
+                        <div class="content-list">
+                            <ul class="product-list">
+                                <li class="product">
+                                    <figure class="product__image">
+                                        <img src="./assets/images/bag.png" alt="Backpack">
+                                    </figure>
+                                    <div class="product__info">
+                                        <div class="product-details">
+                                            <p class="product__title">Vintage Backbag</p>
+                                            <div class="product__price">
+                                                <span class="current-price">$54.99</span>
+                                                <span class="old-price">$94.99</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-actions">
+                                            <button type="button" class="cart-actions__remove" data-action="remove">
+                                                <span class="material-icons-round md-16">remove</span>
+                                            </button>
+                                            <span class="product__count">1</span>
+                                            <button type="button" class="cart-actions__add" data-action="add">
+                                                <span class="material-icons-round md-16">add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product">
+                                    <figure class="product__image">
+                                        <img src="./assets/images/shoes.png" alt="Shoes">
+                                    </figure>
+                                    <div class="product__info">
+                                        <div class="product-details">
+                                            <p class="product__title">Levi Shoes</p>
+                                            <div class="product__price">
+                                                <span class="current-price">$74.99</span>
+                                                <span class="old-price">$124.99</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cart-actions">
+                                            <button type="button" class="cart-actions__remove" data-action="remove">
+                                                <span class="material-icons-round md-16">remove</span>
+                                            </button>
+                                            <span class="product__count">1</span>
+                                            <button type="button" class="cart-actions__add" data-action="add">
+                                                <span class="material-icons-round md-16">add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="checkout-summary">
+                            <ul class="summary-list">
+                                <li class="summary-item">
+                                    <span class="summary-item__title">Shipping</span>
+                                    <span class="shipping-price">$19</span>
+                                </li>
+                                <li class="summary-item">
+                                    <span class="summary-item__title">Total</span>
+                                    <span class="total-price">$148.98</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

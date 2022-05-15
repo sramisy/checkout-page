@@ -1,0 +1,18 @@
+.btn {
+  padding-block: var(--size-4);
+  padding-inline: var(--size-11);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--br-3);
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+}
+
+.btn--primary:focus {
+    outline: 2px solid var(--clr-orange);
+    outline-offset: 2px;
+}
